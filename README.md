@@ -2,11 +2,12 @@
 
 > **Production-Grade MERN Stack Web Application for Student Career Planning, AI Roadmap Generation, ATS Resume Analysis, Skill Gap Benchmarking, Company Interview Preparation, and Placement Readiness.**
 
-[![Repository](https://img.shields.io/badge/GitHub-Selvakumaran--2006%2Fcareer--builder-181717?logo=github)](https://github.com/Selvakumaran-2006/career-builder)
-![Tech Stack](https://img.shields.io/badge/Stack-MERN%20(MongoDB%2C%20Express%2C%20React%2C%20Node.js)-indigo)
-![Design](https://img.shields.io/badge/UI-Dark%20Mode%20Glassmorphism-purple)
-![Deployment](https://img.shields.io/badge/Deployment-Render%20Web%20Service-brightgreen)
-![License](https://img.shields.io/badge/License-MIT-blue.svg)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-career--builder--jmxg.onrender.com-brightgreen?style=for-the-badge&logo=render)](https://career-builder-jmxg.onrender.com)
+[![Repository](https://img.shields.io/badge/GitHub-Selvakumaran--2006%2Fcareer--builder-181717?style=for-the-badge&logo=github)](https://github.com/Selvakumaran-2006/career-builder)
+
+---
+
+### 🌐 **Live Project Link**: [https://career-builder-jmxg.onrender.com](https://career-builder-jmxg.onrender.com)
 
 ---
 
@@ -36,7 +37,7 @@
 ### 1. 📊 Student Dashboard & Career Readiness Gauge
 - **Readiness Score**: Calculates live percentage match (e.g., `84%`) based on current skills vs target placement requirements.
 - **Coding Streak Counter**: Tracks daily problem solving (18 Days 🔥) across LeetCode, HackerRank, and CodeChef.
-- **Analytics Charts**: Interactive Recharts displaying weekly learning hours and a 6-axis skill radar matrix.
+- **Visual Analytics**: Interactive Recharts displaying weekly learning hours and a 6-axis skill radar matrix.
 
 ### 2. 🗺️ AI Career Roadmap Generator
 - Custom 6-month timelines for **10 Industry Roles**:
@@ -144,16 +145,10 @@ npm run dev      # Starts React Vite app on http://localhost:3000
 
 ---
 
-## 🌐 Deploying to Render
+## 🌐 Live Render Deployment
 
-This repository includes a [`render.yaml`](render.yaml) file for automated deployment on [Render](https://render.com).
-
-1. Log in to **[dashboard.render.com](https://dashboard.render.com)**.
-2. Click **New +** -> **Blueprint** -> Connect `Selvakumaran-2006/career-builder`.
-3. Render automatically executes:
-   - **Build Command**: `npm run build`
-   - **Start Command**: `npm start`
-4. Add your **`MONGO_URI`** environment variable in the Render Environment tab.
+- **Live URL**: [https://career-builder-jmxg.onrender.com](https://career-builder-jmxg.onrender.com)
+- **Deployment Config**: [`render.yaml`](render.yaml)
 
 ---
 
