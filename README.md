@@ -1,72 +1,133 @@
 # 🚀 Career Builder – AI Powered Career Roadmap Generator
 
-> **Industry-Level MERN Stack Web Application for Student Career Planning, AI Roadmap Generation, ATS Resume Analysis, Skill Gap Benchmarking, and Placement Preparation.**
+> **Production-Grade MERN Stack Web Application for Student Career Planning, AI Roadmap Generation, ATS Resume Analysis, Skill Gap Benchmarking, Company Interview Preparation, and Placement Readiness.**
 
-![License](https://img.shields.io/badge/License-MIT-blue.svg)
+[![Repository](https://img.shields.io/badge/GitHub-Selvakumaran--2006%2Fcareer--builder-181717?logo=github)](https://github.com/Selvakumaran-2006/career-builder)
 ![Tech Stack](https://img.shields.io/badge/Stack-MERN%20(MongoDB%2C%20Express%2C%20React%2C%20Node.js)-indigo)
-![Design](https://img.shields.io/badge/Design-Glassmorphism%20Dark%20Theme-purple)
+![Design](https://img.shields.io/badge/UI-Dark%20Mode%20Glassmorphism-purple)
+![Deployment](https://img.shields.io/badge/Deployment-Render%20Web%20Service-brightgreen)
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
 
 ---
 
-## ✨ Features Overview
+## 🌟 Application Architecture & Features
 
-### 1. 🎯 Career Readiness & Dashboard
-- **Live Readiness Score**: Calculates percentage readiness (e.g. 84%) based on target role requirements vs current skills.
-- **Coding Streak & Metrics**: Tracks daily problem-solving streak (18 Days 🔥) and problem counts across LeetCode, HackerRank, and CodeChef.
-- **Visual Analytics**: Interactive Recharts graphs displaying weekly learning hours and a skill radar matrix.
+```
+               ┌──────────────────────────────────────────────┐
+               │    React 18 + Vite Glassmorphic UI (Client)  │
+               └──────────────────────┬───────────────────────┘
+                                      │ REST API Calls (Axios)
+                                      ▼
+               ┌──────────────────────────────────────────────┐
+               │  Express.js MVC Server & REST Endpoints      │
+               └──────┬──────────────────────┬────────────────┘
+                      │                      │
+                      ▼                      ▼
+        ┌────────────────────────┐  ┌─────────────────────────┐
+        │ MongoDB Atlas / Mongoose│  │  AI Intelligence Engine │
+        │ Document Collections   │  │ (Gemini API & Heuristics)│
+        └────────────────────────┘  └─────────────────────────┘
+```
+
+---
+
+## ⚡ Key Modules & Features
+
+### 1. 📊 Student Dashboard & Career Readiness Gauge
+- **Readiness Score**: Calculates live percentage match (e.g., `84%`) based on current skills vs target placement requirements.
+- **Coding Streak Counter**: Tracks daily problem solving (18 Days 🔥) across LeetCode, HackerRank, and CodeChef.
+- **Analytics Charts**: Interactive Recharts displaying weekly learning hours and a 6-axis skill radar matrix.
 
 ### 2. 🗺️ AI Career Roadmap Generator
-- Personalized 6-month timelines for **10 Target Careers**: Full Stack Developer, Frontend, Backend, Java, Python, AI Engineer, Data Analyst, DevOps, Cyber Security, Mobile App Developer.
-- Topic completion checkmarks, interactive resource drawers (YouTube, Docs, Free Courses, Practice), and AI regenerate button.
+- Custom 6-month timelines for **10 Industry Roles**:
+  - Full Stack Developer, Frontend Developer, Backend Developer
+  - Java Developer, Python Developer, AI Engineer
+  - Data Analyst, DevOps Engineer, Cyber Security Engineer, Mobile App Developer
+- Month-by-month interactive timeline node graph, topic completion checkboxes, and curated resources (YouTube, Docs, Free Courses, Practice).
 
-### 3. 🔍 Career Gap & ATS Resume Screener
-- **Career Gap Analyzer**: Skill gap meter matching current student skills against MAANG/Product standards with priority learning paths (High, Medium, Low).
-- **ATS Resume Screener**: Drag & drop PDF resume upload, ATS Score Gauge (85%), missing keyword matrix, and action verb bullet suggestions.
+### 3. 🔍 Career Gap Analyzer & ATS Resume Screener
+- **Gap Analyzer**: Skill benchmark comparing student skills against MAANG/Product standards with priority learning paths (`High`, `Medium`, `Low`).
+- **ATS Resume Screener**: Drag & drop PDF resume upload, ATS Score Gauge (`85%`), missing keyword matrix, and action verb bullet suggestions.
 
 ### 4. 🎙️ AI Mock Interview Simulator & Company Prep Hub
-- **AI Mock Interview Room**: Practice Technical, HR, and Behavioral rounds with text/voice input, instant AI score report (88%), technical keyword hits, and speech feedback.
-- **Target Company Intelligence**: Detailed interview prep guides for **Google, Amazon, Microsoft, Zoho, TCS, Infosys, Accenture**, complete with rounds breakdown, top coding questions, and C++/Java solutions.
+- **AI Mock Interview Simulator**: Practice Technical, HR, and Behavioral rounds with text/voice input, instant AI score evaluation (`88%`), technical keyword hits, and speech feedback.
+- **Target Company Intelligence**: Comprehensive interview prep guides for **Google, Amazon, Microsoft, Zoho, TCS, Infosys, Accenture** complete with interview rounds breakdown, top coding questions, and C++/Java solutions.
 
-### 5. 📅 Study Planner & GitHub Analyzer
-- **Focus Pomodoro Timer**: Integrated 25-minute study clock.
-- **Task Planner**: Daily/Weekly/Monthly task organization with priority tags.
-- **GitHub Profile Analyzer**: Repo language distribution chart, contribution streak simulator, and optimization tips.
+### 5. 📅 Study Planner, GitHub Analyzer & Admin Control
+- **Pomodoro Timer**: Integrated 25-minute deep focus study timer.
+- **Task Planner**: Daily / Weekly / Monthly task organization with priority tags.
+- **GitHub Profile Analyzer**: Repository language distribution chart, contribution streak simulator, and optimization tips.
 - **Achievements & Leaderboard**: Level badges, XP points system, and global student placement rankings.
+- **Admin Management Panel**: View system analytics, manage student users, toggle roles, and publish learning resources.
 
 ---
 
-## 🛠️ Tech Stack & Architecture
+## 🛠️ Tech Stack & Directory Structure
 
-### **Frontend (`/client`)**
-- **Core**: React 18, Vite
-- **Styling**: Tailwind CSS (Dark Mode Glassmorphism with neon accents)
-- **Icons & Charts**: Lucide-React, Recharts
-- **HTTP Client**: Axios
-- **Routing**: React Router DOM v6
-
-### **Backend (`/server`)**
-- **Runtime & Framework**: Node.js, Express.js (MVC Pattern)
-- **Database & ORM**: MongoDB Atlas, Mongoose
-- **Authentication**: JWT (JSON Web Tokens), bcrypt.js
-- **File Uploads**: Multer, Cloudinary
-- **AI Engine**: Gemini API Integration & Heuristic Fallback Engine
-- **Validation**: Express-Validator
+```
+career-builder/
+├── client/                      # React 18 + Vite Frontend
+│   ├── src/
+│   │   ├── components/          # GlassCard, Navbar, Sidebar
+│   │   ├── context/             # AuthContext, ThemeContext
+│   │   ├── pages/               # 15+ Module Pages (Dashboard, Roadmap, etc.)
+│   │   ├── App.jsx              # Router & Layout System
+│   │   ├── index.css            # Tailwind & Glassmorphism Design Tokens
+│   │   └── main.jsx             # Entry Point
+│   ├── package.json
+│   └── vite.config.js
+│
+├── server/                      # Node.js + Express REST API Backend
+│   ├── config/                  # MongoDB Connection
+│   ├── controllers/             # Auth, Profile, Roadmap, Gap, ATS, Mock Interview
+│   ├── middleware/              # Auth Protection, Admin Guard, Multer Upload
+│   ├── models/                  # Mongoose Schemas (User, Profile, Roadmap, etc.)
+│   ├── routes/                  # RESTful API Endpoints
+│   ├── services/                # AI Intelligence Service (Gemini API / Fallback)
+│   ├── utils/                   # Database Seed Script
+│   ├── server.js                # Express App & Production Static Client Serving
+│   └── package.json
+│
+├── package.json                 # Monorepo Build & Start Scripts for Render
+├── render.yaml                  # Render Blueprint Infrastructure Config
+└── README.md
+```
 
 ---
 
-## 🚀 Quick Setup & Installation
+## 📡 REST API Endpoint Reference
 
-### Prerequisites
-- Node.js (v18+ recommended)
-- MongoDB installed locally OR a MongoDB Atlas cluster URI.
+| Module | HTTP Method | Endpoint Path | Description |
+| :--- | :--- | :--- | :--- |
+| **Auth** | `POST` | `/api/auth/register` | Register new student or admin account |
+| **Auth** | `POST` | `/api/auth/login` | Authenticate user & return JWT token |
+| **Auth** | `GET` | `/api/auth/me` | Fetch active user credentials |
+| **Profile** | `GET` | `/api/profile` | Get student profile, CGPA & skills |
+| **Profile** | `PUT` | `/api/profile` | Update profile info & career goals |
+| **Profile** | `POST` | `/api/profile/resume` | Upload PDF resume file |
+| **Roadmap** | `GET` | `/api/roadmap` | Fetch target role career roadmap |
+| **Roadmap** | `POST` | `/api/roadmap/generate` | Synthesize new AI career roadmap |
+| **Gap Analyzer** | `POST` | `/api/gap-analyzer/analyze` | Calculate readiness score & missing skills |
+| **Resume ATS** | `POST` | `/api/resume/analyze` | Scan resume text & return ATS score |
+| **Company Prep**| `GET` | `/api/companies` | List top target company interview preps |
+| **Mock Interview**| `GET` | `/api/mock-interview/questions` | Fetch technical/behavioral interview prompts |
+| **Mock Interview**| `POST` | `/api/mock-interview/evaluate` | Evaluate recorded answer with AI scoring |
+| **GitHub** | `POST` | `/api/github/analyze` | Analyze GitHub profile & language stats |
+| **Planner** | `GET` | `/api/planner/tasks` | Fetch study tasks & pomodoro items |
+| **Achievements**| `GET` | `/api/achievements/leaderboard` | Get global student placement leaderboard |
+| **Admin** | `GET` | `/api/admin/stats` | View administrative system metrics |
+
+---
+
+## 💻 Local Development Setup
 
 ### Step 1: Clone Repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/career-builder.git
+git clone https://github.com/Selvakumaran-2006/career-builder.git
 cd career-builder
 ```
 
-### Step 2: Install Backend Dependencies & Start Server
+### Step 2: Start Backend API
 ```bash
 cd server
 npm install
@@ -74,25 +135,27 @@ npm run seed     # Populate database with sample companies & users
 npm run dev      # Starts API on http://localhost:5000
 ```
 
-### Step 3: Install Frontend Dependencies & Start App
+### Step 3: Start Frontend Client
 ```bash
 cd ../client
 npm install
-npm run dev      # Starts Vite app on http://localhost:3000
+npm run dev      # Starts React Vite app on http://localhost:3000
 ```
 
 ---
 
-## 🔐 Environment Variables (`server/.env`)
-```env
-PORT=5000
-MONGO_URI=mongodb://localhost:27017/career_builder
-JWT_SECRET=supersecret_career_builder_jwt_token_2026_key
-CLOUDINARY_CLOUD_NAME=demo_cloud
-GEMINI_API_KEY=
-```
+## 🌐 Deploying to Render
+
+This repository includes a [`render.yaml`](render.yaml) file for automated deployment on [Render](https://render.com).
+
+1. Log in to **[dashboard.render.com](https://dashboard.render.com)**.
+2. Click **New +** -> **Blueprint** -> Connect `Selvakumaran-2006/career-builder`.
+3. Render automatically executes:
+   - **Build Command**: `npm run build`
+   - **Start Command**: `npm start`
+4. Add your **`MONGO_URI`** environment variable in the Render Environment tab.
 
 ---
 
-## 📄 License
-Distributed under the MIT License. See `LICENSE` for more information.
+## 📜 License
+Distributed under the MIT License. Developed for placement, hackathons, and software engineering portfolios.
