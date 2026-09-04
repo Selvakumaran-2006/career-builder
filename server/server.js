@@ -62,6 +62,16 @@ app.use('/api/achievements', achievementRoutes);
 app.use('/api/notifications', notificationRoutes);
 app.use('/api/admin', adminRoutes);
 
+// Production Static Serving
+if (process.env.NODE_ENV === 'production' || require('fs').existsSync(path.join(__dirname, '../client/dist'))) {
+  const clientDist = path.join(__dirname, '../client/dist');
+  app.use(express.static(clientDist));
+  app.get('*', (req, res, next) => {
+    if (req.path.startsWith('/api')) return next();
+    res.sendFile(path.join(clientDist, 'index.html'));
+  });
+}
+
 // Error Handling Middleware
 app.use((err, req, res, next) => {
   console.error('[Server Error]:', err.stack);

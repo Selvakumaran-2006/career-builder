@@ -1,0 +1,15 @@
+{
+  "name": "career-builder-app",
+  "version": "1.0.0",
+  "description": "Career Builder AI Full-Stack MERN Application",
+  "main": "server/server.js",
+  "scripts": {
+    "build": "npm --prefix client install && npm --prefix client run build && npm --prefix server install",
+    "start": "node server/server.js",
+    "server": "npm --prefix server start",
+    "client": "npm --prefix client dev"
+  },
+  "keywords": ["mern", "react", "node", "express", "mongodb", "ai", "career-roadmap"],
+  "author": "Selvakumaran",
+  "license": "MIT"
+}
